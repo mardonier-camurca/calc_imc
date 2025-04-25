@@ -1,4 +1,39 @@
-let altura = 1.84;
-let peso = 147;
-let imc = peso / (altura * altura);
-console.log(`Seu imc é ${imc} seu imc foi maior que 30 seu resultado: Obesidade.`);
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de IMC</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Calculadora de IMC</h1>
+        <form id="imc-form">
+            <div class="form-group">
+                <label for="peso">Peso (kg)</label>
+                <input type="number" id="peso" placeholder="Ex: 70.5" step="0.1" min="0" required>
+                <div id="peso-error" class="error">Por favor, insira um peso válido.</div>
+            </div>
+            <div class="form-group">
+                <label for="altura">Altura (m)</label>
+                <input type="number" id="altura" placeholder="Ex: 1.75" step="0.01" min="0" required>
+                <div id="altura-error" class="error">Por favor, insira uma altura válida.</div>
+            </div>
+            <button type="submit">Calcular IMC</button>
+        </form>
+
+        <div id="result" class="result">
+            <h2>Resultado</h2>
+            <p>Seu IMC é: <span id="imc-value"></span></p>
+            <p>Classificação: <span id="imc-classification" class="classification"></span></p>
+        </div>
+    </div>
+
+    <footer>
+        &copy; 2025 Calculadora de IMC
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
